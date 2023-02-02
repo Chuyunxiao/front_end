@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //打印5句话
+        // break应用
+        let i = 1
+        while(i <= 5) {
+            if(i === 3){
+                console.log('里面有虫子，我不吃了')
+                break //退出循环
+            }
+            console.log(`我要吃第${i}个包子`)
+            i++
+        }
+        console.log('------------------------')
+        // continue应用
+        let j = 1
+        while(j <= 5) {
+            if(j === 3){
+                console.log('没有虫子，继续吃')
+                j++
+                continue //结束本次循环
+            }
+            console.log(`我要吃第${j}个包子`)
+            j++
+        }
+    </script>
+</body>
+</html>

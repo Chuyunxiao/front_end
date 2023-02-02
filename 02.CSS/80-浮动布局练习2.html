@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        width: 1226px;
+        height: 285px;
+        background-color: pink;
+        margin: 0 auto;
+      }
+
+      .box li {
+        float: left;
+        list-style-type: none;
+        margin-right: 14px;
+        width: 296px;
+        height: 285px;
+      }
+      /* 要注意权重的问题 上面的.box li权重为11 .box .four的权重为20 */
+      .box .one {
+        background-color: blue;
+      }
+
+      .box .two {
+        background-color: yellow;
+      }
+
+      .box .three {
+        background-color: greenyellow;
+      }
+
+      .box .four {
+        background-color: skyblue;
+        margin-right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="box">
+      <li class="one">1</li>
+      <li class="two">2</li>
+      <li class="three">3</li>
+      <li class="four">4</li>
+    </ul>
+  </body>
+</html>

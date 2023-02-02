@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="demo.php" method="get" name="name1">
+      用户名:<input
+        type="text"
+        name="username"
+        value="请输入用户名"
+        maxlength="15"
+      />
+      <br />
+      <!--type类型包括:button按钮 checkbox复选框 file文件 hidden隐藏字段 image图像
+        password密码 radio单选框 reset重置 submit提交 text文本-->
+
+      密码:<input type="password" name="password" /> <br />
+
+      <!-- checked标签 = "checked" 即默认选择框中元素 -->
+      性别: 男<input type="radio" name="sex" value="男" />女
+      <input type="radio" name="sex" value="女" checked="checked" /> <br />
+      <!--单选框radio需要有相同的name值-->
+
+      爱好:吃饭 <input type="checkbox" name="hoby" />睡觉
+      <input type="checkbox" name="hoby" />打豆豆
+      <input type="checkbox" name="hoby" checked="checked" />
+      <!--多选框checkbox也需要有相同的name值-->
+
+      <br />
+      <input type="submit" value="免费注册" />
+      <input type="reset" value="重新填写" />
+      <input type="button" value="获取短信验证码" /> <br />
+      <!-- button 普通按钮 后期结合js搭配使用-->
+      上传头像:<input type="file" />
+    </form>
+  </body>
+</html>

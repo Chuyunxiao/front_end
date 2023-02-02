@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- visibility可见性： -->
+    <!-- inherit:继承父对象的可见性 visible:对象可视 hidden:对象隐藏 collapse:隐藏表格的行列-->
+    <style>
+      .baba {
+        /* visibility隐藏和display区别在于，visibility会保留位置 */
+        visibility: hidden;
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+
+      .mama {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="baba">猪爸爸</div>
+    <div class="mama">猪妈妈</div>
+  </body>
+</html>

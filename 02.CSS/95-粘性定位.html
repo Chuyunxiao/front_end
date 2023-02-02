@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 粘性定位特点： -->
+    <!-- 1.以浏览器可视窗口为基准定位 -->
+    <!-- 2.粘性定位占有原先的位置 -->
+    <!-- 3.必须添加边偏移top bottom left right其中一个才能生效 -->
+    <style>
+      body {
+        height: 3000px;
+      }
+
+      .nav {
+        position: sticky;
+        top: 0px;
+        width: 800px;
+        height: 50px;
+        background-color: pink;
+        margin: 100px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">我是导航栏</div>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>外边距合并-嵌套块级元素垂直外边距塌陷</title>
+    <style>
+      /* 当父元素和子元素都设置了外边距 且子元素外边距大于父元素 会发生塌陷 有3种解决方案: */
+      /* 1.给父元素设置上外边框 */
+      /* 2.给父元素设置上内边距 */
+      /* 3.给父元素添加overflow: hidden的样式属性 */
+      .father {
+        width: 400px;
+        height: 400px;
+        background-color: purple;
+        margin-top: 50px;
+        /* border-top: 1px solid transparent; 方案1*/
+        /* padding-top: 1px; 方案2*/
+        overflow: hidden; /* 方案3 */
+      }
+      .son {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        margin-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="father">
+      <div class="son"></div>
+    </div>
+  </body>
+</html>

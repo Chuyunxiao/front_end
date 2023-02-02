@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 绝对定位【脱标】 */
+      /* 【子绝父相】孩子用绝对定位，但父元素一定要用相对定位，因为父元素需要占有位置 */
+      .father {
+        width: 500px;
+        height: 500px;
+        background-color: skyblue;
+      }
+
+      /* 如果son没有父亲或者父元素没定位，以浏览器为基准对齐 */
+      .son {
+        position: absolute;
+        /* top: 10px;
+        left: 10px; */
+        /* top: 100px;
+        right: 200px; */
+        left: 0;
+        bottom: 0;
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="father">
+      <div class="son"></div>
+    </div>
+  </body>
+</html>

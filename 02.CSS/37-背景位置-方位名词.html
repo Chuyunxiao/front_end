@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 利用background-position属性 可以改变图片在背景中的位置 */
+      /* background-position: x y; 其中x,y代表坐标值， 可以使用方位名词或者精确单位*/
+      /* 参数值length：百分数|由浮点数字和单位标识符组成的长度值 */
+      /* 参数值position：top|center|bottom|left|center|right 方位名词 */
+      div {
+        width: 300px;
+        height: 300px;
+        background-color: pink;
+        background-image: url(img/logo.png);
+        background-repeat: no-repeat;
+        /* 参数顺序无关 center top = top center */
+        background-position: center top;
+        /* 如果只设置了一个方位名词 另一个默认为center */
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let flag = true
+        let money = 0
+        while(flag){
+            let op = +prompt(`请您选择操作:
+            1.存钱
+            2.取钱
+            3.查看余额
+            4.退出`)
+            switch(op) {
+                case 1:
+                    let add = +prompt('请输入存钱金额:')
+                    money += add
+                    alert('操作成功!')
+                    break
+                case 2:
+                    let sub = +prompt('请输入取钱金额:')
+                    if(money > sub) money -= sub
+                    else alert('余额不足!')
+                    break
+                case 3:
+                    alert(`您的余额为${money}元`)
+                    break
+                case 4:
+                    flag = false
+                    break
+                default:
+                    alert('请输入1-4范围的操作数')
+            }
+        }
+    </script>
+</body>
+</html>

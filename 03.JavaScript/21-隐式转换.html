@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // prompt返回的类型是 string类型 一般要进行数据转换
+        // let age = prompt('请输入你的年龄')
+        // console.log(typeof(age)) 显示的是string
+
+        // 隐式转换规则：
+        // 1.如果加号+ 两边有一个是字符串string 则会把另一个转成字符串string
+        // 2.除了加号+ 以外的算术运算符 如- * / 都会把数据转换为数字类型number
+        console.log(1 + 1) // 2 
+        console.log('pink' + 1) // pink1
+        console.log(2 + 2) // 4
+        console.log(2 + '2') // 22
+        console.log(2 - 2) // 0
+        console.log(2 - '2') // 0
+        console.log(+12) // 12
+        console.log(+'123') // 123 加号作为正号 放在字符串string之前可以转换为数字型number
+    </script>
+</body>
+</html>

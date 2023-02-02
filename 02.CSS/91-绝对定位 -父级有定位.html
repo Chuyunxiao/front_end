@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 绝对定位【脱标】 */
+      /* 【子绝父相】孩子用绝对定位，但父元素一定要用相对定位，因为父元素需要占有位置 */
+      .grandfather {
+        position: relative;
+        width: 800px;
+        height: 800px;
+        background-color: hotpink;
+      }
+
+      .father {
+        /* position: relative; */
+        width: 500px;
+        height: 500px;
+        background-color: skyblue;
+      }
+
+      /* 如果祖先元素有定位，以最近一级有定位的祖先元素为参照点定位 */
+      .son {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grandfather">
+      <div class="father">
+        <div class="son"></div>
+      </div>
+    </div>
+  </body>
+</html>

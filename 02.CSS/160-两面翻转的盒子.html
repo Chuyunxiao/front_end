@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 200px auto;
+        perspective: 500px;
+        transform-style: preserve-3d;
+        transition: all 1s;
+      }
+      .box:hover {
+        transform: rotateY(180deg);
+      }
+      .zheng,
+      .fu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        line-height: 200px;
+        text-align: center;
+        border-radius: 50%;
+        color: white;
+      }
+      .zheng {
+        /* 让正面盒子往前走一点点 很关键! */
+        transform: translateZ(1px);
+        background-color: #ffc7c9;
+      }
+      .fu {
+        background-color: #891383;
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="zheng">黑马程序员</div>
+      <div class="fu">我在这里等你</div>
+    </div>
+  </body>
+</html>

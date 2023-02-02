@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        /* -moz-代表firebox浏览器私有属性 */
+        /* -ms-代表IE浏览器私有属性 */
+        /* -webkit-代表chrome、safari浏览器私有属性 */
+        /* -o-代表Opera浏览器私有属性 */
+        /* 考虑兼容性推荐如下写法： */
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

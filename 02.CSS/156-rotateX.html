@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        perspective: 500px;
+      }
+      img {
+        display: block;
+        margin: 100px auto;
+        transition: all 1s;
+      }
+      img:hover {
+        /* rotateX 正值+往内转 负值-往外转 */
+        /* 可以用左手准则判断 大拇指指向轴的正方向 其余四指就是转动的正方向 */
+        transform: rotateX(45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <img src="img/pig1.jpg" />
+  </body>
+</html>

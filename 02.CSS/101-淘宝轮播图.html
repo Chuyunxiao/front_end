@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      .box {
+        position: relative;
+        width: 520px;
+        height: 280px;
+        margin: 100px auto;
+        background-color: skyblue;
+      }
+
+      .box img {
+        width: 520px;
+        height: 280px;
+      }
+
+      .left,
+      .right {
+        position: absolute;
+        top: 50%;
+        width: 20px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        margin-top: -15px;
+        border-radius: 0 15px 15px 0;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+
+      .left {
+        left: 0;
+        border-radius: 0 15px 15px 0;
+      }
+
+      .right {
+        /* 如果一个盒子既有left也有right 优先left 如果既有top也有bottom 优先top */
+        right: 0;
+        border-radius: 15px 0px 0px 15px;
+      }
+
+      .box a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .box .bottom ul {
+        position: absolute;
+        left: 50%;
+        bottom: 15px;
+        width: 70px;
+        height: 13px;
+        line-height: 10px;
+        margin-left: -35px;
+        border-radius: 7px;
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+
+      .box .bottom li {
+        float: left;
+        width: 8px;
+        height: 8px;
+        margin: 3px;
+        border-radius: 50%;
+        background-color: white;
+      }
+
+      .box .bottom .orange {
+        background-color: #ff5000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img src="img/tb.jpg" />
+      <a href="#" class="left">&lt;</a>
+      <a href="#" class="right">&gt;</a>
+      <div class="bottom">
+        <ul>
+          <li class="orange"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+.nav {
+  overflow: hidden;
+}
+
+.sk {
+  position: absolute;
+  left: 190px;
+  top: 40px;
+  border-left: 1px solid #c81523;
+  padding: 3px 0 0 14px;
+}
+
+.sk_list {
+  float: left;
+}
+
+.sk_list ul li {
+  float: left;
+}
+
+.sk_list ul li a {
+  display: block;
+  line-height: 47px;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+}
+
+.sk_con {
+  float: left;
+}
+
+.sk_con ul li {
+  float: left;
+}
+
+.sk_con ul li a {
+  display: block;
+  line-height: 49px;
+  padding: 0 20px;
+  font-size: 14px;
+}
+
+.sk_con ul li:last-child a::after {
+  content: "\e91e";
+  font-family: "icomoon";
+}
+
+em {
+  font-style: normal;
+  color: #f01800;
+}
+
+.box {
+  float: left;
+  width: 290px;
+  height: 460px;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-right: 13px;
+}
+
+.sk_bd ul li:nth-child(4n) .box {
+  margin-right: 0;
+}
+.box:hover {
+  border: 1px solid #c81523;
+}
+
+.box .img {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.box .img img {
+  margin-top: 29px;
+  width: 45%;
+  height: 45%;
+}
+
+p {
+  width: 100%;
+  font-size: 14px;
+  color: #777;
+  text-align: left;
+  margin: 0px 20px;
+}
+
+.money {
+  height: 15px;
+  margin: 14px 20px;
+  margin-top: 5px;
+}
+
+.money .now {
+  float: left;
+  line-height: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  color: red;
+  margin-right: 3px;
+}
+
+.money .post {
+  float: left;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #777;
+  text-decoration: line-through;
+}
+
+.load {
+  height: 15px;
+  line-height: 15px;
+  font-size: 14px;
+  margin: 5px 20px;
+  color: #777;
+}
+
+.load .already {
+  display: inline-block;
+}
+
+.load .loading {
+  display: inline-block;
+  width: 100px;
+  height: 10px;
+  padding: 0.5px;
+  border: 1px solid red;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.load .loading .one {
+  height: 7px;
+  width: 1px;
+  background-color: red;
+  transition: all 1s;
+}
+
+.load .loading:hover .one {
+  width: 80px;
+}
+
+.load .left {
+  display: inline-block;
+}
+
+.foot {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #bc2715;
+}
+
+.foot a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}

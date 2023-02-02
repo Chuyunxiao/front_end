@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 父亲的权重为100 */
+      #father {
+        color: red;
+      }
+      /* p继承的权重为0 */
+      /* 所以 以后我们看标签到底执行哪个样式 先看这个标签有没有直接被选出来 */
+      p {
+        color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="father">
+      <p>你还是很好看</p>
+    </div>
+  </body>
+</html>

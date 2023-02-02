@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let flag = true
+    while(flag){
+      let num1, num2
+      let sig = prompt('请输入运算符：')
+      switch(sig){
+        case '+':
+          num1 = +prompt('请输入第一个数字：')
+          num2 = +prompt('请输入第二个数字：')
+          alert(`您选择的是加号，结果为${num1 + num2}`)
+          break
+        case '-':
+          num1 = +prompt('请输入第一个数字：')
+          num2 = +prompt('请输入第二个数字：')
+          alert(`您选择的是减号，结果为${num1 - num2}`)
+          break
+        case '*':
+          num1 = +prompt('请输入第一个数字：')
+          num2 = +prompt('请输入第二个数字：')
+          alert(`您选择的是乘号，结果为${num1 * num2}`)
+          break
+        case '/':
+          num1 = +prompt('请输入第一个数字：')
+          num2 = +prompt('请输入第二个数字：')
+          alert(`您选择的是除号，结果为${num1 / num2}`)
+          break
+        case 'q':
+          flag = false
+          break
+        default:
+          alert('请输入+-*/运算符或者q退出')
+    }
+  }
+  </script>
+</body>
+</html>

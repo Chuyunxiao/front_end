@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = '123'
+        console.log(typeof(Number(str))) // number
+        // console.log(Number('pink')) 这样写不对 不能把string强行转number string为数字可以转换
+        // let num = prompt('请输入您的年薪:')
+        // console.log(num)
+        // console.log(Number(num))
+        let num = Number(prompt('请输入您的年薪:'))
+        // let num = +prompt('请输入您的年薪:') 简写
+        console.log(num)
+
+        // parseInt 只保留整数
+        console.log(parseInt(23.33))
+        console.log(parseInt('12px')) //可以转换字符串为整数
+        // parseFloat 可保留小数
+        console.log(parseFloat(23.33))
+        console.log(parseFloat('12.34')) //可以转换字符串为浮点数
+    </script>
+</body>
+</html>

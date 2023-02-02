@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 300px;
+        height: 300px;
+        background-color: pink;
+      }
+
+      div::before {
+        display: inline-block;
+        width: 30px;
+        height: 40px;
+        background-color: skyblue;
+        /* content属性必须写 伪元素选择器创建的是不存在与文档树中的【行内元素】*/
+        content: "我";
+      }
+      /* 伪元素选择器权重为1 */
+      div::after {
+        content: "pink老师";
+      }
+    </style>
+  </head>
+  <body>
+    <div>是</div>
+  </body>
+</html>
