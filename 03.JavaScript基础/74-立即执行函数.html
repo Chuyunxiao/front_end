@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let num = 10
+        // let num = 20 错误，报错
+
+        // (function(){}) () 立即执行函数 末尾的()相当于调用了函数
+
+        // (function(){
+        //     console.log(11)
+        // })()
+        (function(){
+            let num = 10
+        })(); //立即执行函数末尾必须加分号
+
+        (function(){
+            let num = 20 //这样再声明同名变量不会报错
+        })();
+
+        (function(a, b){
+            console.log(a + b)
+        })(10, 20);
+
+        // 2.第二种写法
+        // (function(){} () )
+    </script>
+</body>
+</html>

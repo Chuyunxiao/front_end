@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Math.random() 生成一个0~1之间 包括0但不包括1的随机小数 [0,1)
+        console.log(Math.random())
+        // 生成0 ~ 10随机数
+        console.log(Math.floor(Math.random() * 11))
+        // 生成5 ~ 10随机数
+        console.log(Math.floor(Math.random() * 6) + 5)
+        // 生成N ~ M随机数
+        function getRandom(N, M) {
+            return Math.floor(Math.random() * (M - N + 1)) + N
+        }
+        console.log(getRandom(4,8))
+
+        //抽数组中的一个元素
+        let arr = ['pink','red','blue']
+        let random = Math.floor(Math.random() * arr.length)
+        console.log(arr[random])
+    </script>
+</body>
+</html>

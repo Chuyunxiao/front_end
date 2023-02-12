@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 数组.pop() 从数组中删除最后一个元素 并返回最后一个元素的值
+        let arr = ['red','green','blue']
+        // console.log(arr.pop()) // 'blue'
+        arr.pop()
+        console.log(arr)
+
+        // 数组.shift() 从数组中删除第一个元素 并返回第一个元素的值
+        let arr1 = ['red','green','blue']
+        // console.log(arr1.shift()) // 'red'
+        arr1.shift()
+        console.log(arr1)
+
+        // 数组.splice(起始位置,删除几个元素) 删除指定元素
+        let arr2 = ['red','green','blue']
+        // arr2.splice(1) // 从green删除到最后
+        arr2.splice(1,1) // 只删除green
+        console.log(arr2)
+    </script>
+</body>
+</html>

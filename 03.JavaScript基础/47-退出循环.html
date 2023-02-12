@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // break
+        for(let i = 1; i <= 5; i++){
+            if(i === 3){
+                console.log('有虫子，我不吃了')
+                break
+            }
+            console.log(`我正在吃第${i}个包子`)
+        }
+        console.log('------------------------')
+        //continue
+        for(let i = 1; i <= 5; i++){
+            if(i === 3){
+                console.log('没虫子，继续吃')
+                continue
+            }
+            console.log(`我正在吃第${i}个包子`)
+        }
+        // 无限循环
+        // for(; ;){}
+    </script>
+</body>
+</html>

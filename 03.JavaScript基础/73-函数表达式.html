@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.函数表达式
+        let fn = function(a, b) {
+            console.log(a + b)
+        }
+        fn(10, 20)
+
+        // 【函数表达式】和【具名函数】的不同：function fn() {}
+        fun() //1.具名函数的调用可以在声明上面
+        function fun() {
+            console.log(1)
+        }
+
+        // _fun_()  2.匿名函数（函数表达式）只能先声明再调用 否则报错
+        let _fun_ = function () {
+            console.log(2)
+        }
+        _fun_()
+    </script>
+</body>
+</html>

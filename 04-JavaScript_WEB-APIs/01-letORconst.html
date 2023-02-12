@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 简单数据类型const不能修改里面的值的 因为简单数据类型值直接存在栈里
+        // 复杂数据类型 Array Object用const可以修改里面的值 因为值保存在堆里 栈存的是地址不会变
+        const arr = ['red', 'pink']
+        arr.push('blue')
+        console.log(arr)
+        // arr = [1, 2, 4] // 如果const数组被赋予新数组 地址变化 会报错
+        // console.log(arr)
+        // 【以后数组Object和对象Array 建议用const声明】
+    </script>
+</body>
+</html>

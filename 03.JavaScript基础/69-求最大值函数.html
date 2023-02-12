@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        // 求两数最大值并返回
+        function maxNum(a, b){
+            return a > b ? a:b
+        }
+        // 求数组最大值，最小值，用数组返回
+        function maxminNums(arr = []){
+            let MAX_NUM = -1e9
+            let MIN_NUM = 1e9
+            for(let i = 0; i < arr.length; i++){
+                MAX_NUM = arr[i] > MAX_NUM ? arr[i]:MAX_NUM 
+                MIN_NUM = arr[i] < MIN_NUM ? arr[i]:MIN_NUM 
+            }
+            return [MAX_NUM,MIN_NUM] //返回值是数组 Arr[]
+        }
+        
+        let arr = [23,66,99,233,-66,-23,110]
+        let newArr = maxminNums(arr)
+        console.log(`23和66中最大的是${maxNum(23,66)}`)
+        console.log(`数组中最大值是${newArr[0]}`)
+        console.log(`数组中最小值是${newArr[1]}`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        function getRandomColor(mode = true) {
+            let sixteen = ['1','2','3','4','5','6','7','8','9','a','b','c','d','e','f']
+            if(mode){
+                let res = '#'
+                for(let i = 1; i <= 6; i++){
+                    let random = Math.floor(Math.random() * sixteen.length)
+                    res += sixteen[random]
+                }
+                return res
+            }
+            else {
+                let arr = []
+                for(let i = 1; i <= 3; i++){
+                    let random = Math.floor(Math.random() * 256)
+                    arr.push(random)
+                }
+                return `rgb(${arr[0]},${arr[1]},${arr[2]})`
+            }
+        }
+        console.log(getRandomColor(true))
+        console.log(getRandomColor(false))
+        console.log(getRandomColor())
+
+        // 随机div盒子颜色
+        const div = document.querySelector('div')
+        div.style.backgroundColor = getRandomColor()
+    </script>
+</body>
+</html>

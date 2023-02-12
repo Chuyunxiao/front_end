@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let obj = {}
+        // let obj = new Object()
+        let obj = {
+            'user-name': 'pink',
+            age: 18,
+            gender: '女'
+        }
+        console.log(obj)
+        console.log(typeof(obj))
+        console.log('------------------------')
+
+        // 声明对象
+        let goods = {
+            name: '小米小米10 青春版',
+            num: '100012816024',
+            address: '中国大陆'
+        }
+        console.log(goods)
+        // 查找
+        console.log(goods.address)
+        console.log(goods.name)
+        console.log('------------------------')
+        // 更改
+        goods.gender = '男'
+        console.log(goods.gender)
+        console.log('------------------------')
+        // 增加
+        goods.hobby = '足球'
+        console.log(goods)
+        console.log('------------------------')
+        // 删除
+        delete goods.hobby
+        console.log(goods)
+        console.log('------------------------')
+        
+        // 查的另一种属性 对象名[属性名]
+        console.log(obj['user-name'])
+    </script>
+</body>
+</html>

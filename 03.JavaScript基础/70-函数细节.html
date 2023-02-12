@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 函数重名 下面的会覆盖上面的
+        function fn() {
+            console.log(1)
+        }
+        function fn() {
+            console.log(2)
+        }
+        fn() // 2
+
+        // 参数不匹配
+        function _fn_(a, b) {
+            console.log(a + b)
+        }
+        // 实参多余形参 多余的会被忽略
+        _fn_(10,20,30) 
+        // 实参少于形参 默认undefined
+        _fn_(10)
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ''、0、undefined、null、false、NaN 转换为boolean类型后都是false 其余为true
+        console.log(Boolean('pink')) // true
+        console.log(Boolean('')) // false
+        console.log(Boolean(-66)) // true
+        console.log(Boolean(0))  // false
+
+        console.log(Boolean(undefined)) // false
+        console.log(Boolean(null)) // false
+        console.log(Boolean(NaN)) // false
+        console.log('-------------------------------------')
+        let age // undefined
+        if(age) {
+            console.log(666)
+        }
+    </script>
+</body>
+</html>

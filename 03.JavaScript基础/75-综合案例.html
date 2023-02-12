@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 用户输入秒，转换为xx时xx分xx秒
+        let sec = +prompt('请输入秒数：')
+        function translate(sec) {
+            let hour = 0, minute = 0, second = 0
+            second = sec
+            if(sec >= 3600){
+                hour = parseInt(sec / 3600)
+                sec %= 3600
+            } 
+            if(sec >= 60){
+                minute = parseInt(sec / 60)
+                sec %= 60
+            }
+            hour = hour < 10 ? '0' + hour:hour
+            minute = minute < 10 ? '0' + minute:minute
+            sec = sec < 10 ? '0' + sec:sec
+            return `${second}秒转换为${hour}时${minute}分${sec}秒`
+        }
+        let str = translate(sec)
+        console.log(str)
+    </script>
+</body>
+</html>

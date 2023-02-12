@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 写num = [] 是为了防止报错 否则nums.length不存在 写了num = []之后 nums.length = 0
+        function totalScore(nums = []) {
+            let sum = 0
+            for(let i = 0; i < nums.length; i++){
+                sum += nums[i]
+            }
+            document.write(`该学生的总分为${sum}<br>`)
+        }
+        let stu1 = [80,70,66,93,74]
+        let stu2 = [70,60,56,83,64]
+        totalScore(stu1) // 383
+        totalScore(stu2) // 333
+        totalScore([10,20,30,40,50]) // 150
+    </script>
+</body>
+</html>

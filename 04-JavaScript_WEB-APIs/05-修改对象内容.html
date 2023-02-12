@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">我是文字的内容</div>
+    <div class="ceshi">解析标签</div>
+    <script>
+        // 1.获取元素
+        const box = document.querySelector('.box')
+        // 2.修改文字内容 对象.innerText 属性
+        console.log(box.innerText)
+        box.innerText = '我是?' // 修改内容
+        console.log(box.innerText)
+        box.innerText = '<b>我是?</b>' // innerText不解析标签
+        console.log(box.innerText)
+        // box.innerHTML = '<b>我是?</b>'
+
+        // 3.innerHTML解析标签
+        const cs = document.querySelector('.ceshi')
+        cs.innerHTML = '<b>解析标签</b>' //解析了<b></b>标签
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj = {
+            uname: 'andy',
+            age: 18,
+            gender: '男'
+        }
+        // for in语法【相当于c语言中的for(int num:arrs){} 】
+        let arr = ['pink','red','blue']
+        for(let i in arr) {
+            console.log(i) // 数组下标 但是是字符串类型
+            console.log(arr[i])
+        }
+        console.log('---------------')
+
+        // for in 遍历对象
+        for(let it in obj) { 
+            console.log(it) // 打印属性名 it是字符串类型的 'uname' 'age' 'gender'
+            console.log(obj[it]) // 打印属性值 不能用obj.it否则相当于 obj.'uname'【会报错】
+            console.log('---------------')
+        }
+    </script>
+</body>
+</html>

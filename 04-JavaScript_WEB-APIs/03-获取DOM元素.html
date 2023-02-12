@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">123</div>
+    <div class="box">abc</div>
+    <p id="nav">导航栏</p>
+    <ul>
+        <li>测试1</li>
+        <li>测试2</li>
+        <li>测试3</li>
+    </ul>
+    <script>
+        // 1.获取匹配的【第一个】元素 document.querySelector()
+        // const box = document.querySelector('div')
+        const box = document.querySelector('.box')
+        // const nav = document.querySelector('p')
+        const nav = document.querySelector('#nav')
+        nav.style.color = 'red' // 获取的元素可以直接修改属性
+        // 获取ul中的第一个li
+        const li = document.querySelector('ul li:first-child')
+        // document.querySelector()函数返回的是一个对象Object 有就匹配 没有就返回null
+
+        // 2.获取匹配的所有元素 document.querySelectorAll()
+        const lis = document.querySelectorAll('ul li')
+        
+        console.log(box)
+        console.log(nav)
+        console.log(li)
+        console.log(lis) //lis是个数组 数组里全是对象 不能通过lis直接修改元素属性 要用遍历形式修改
+        // lis是个伪数组：有索引 有长度 但是没有pop() push()等数组方法
+
+        // 其他方式（了解）
+        // document.getElementsById('nav') 根据ID名选择
+        // document.getElementsByTagName('nav') 根据标签名选择
+        // document.getElementsByClassName('box') 根据类名选择
+    </script>
+</body>
+</html>
