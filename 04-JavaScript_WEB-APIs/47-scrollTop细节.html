@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // scrollTop可读写 可以赋值 ep:初始666px
+        document.documentElement.scrollTop = 666
+        window.addEventListener('scroll',function(){
+            // 必须写到里面 scrollTop是数字型
+            const n = document.documentElement.scrollTop
+            console.log(n)
+        })
+    </script>
+</body>
+</html>

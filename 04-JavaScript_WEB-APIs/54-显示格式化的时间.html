@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 300px;
+        height: 40px;
+        border: 1px solid pink;
+        text-align: center;
+        line-height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      function getMyDate() {
+        const date = new Date()
+        const year = date.getFullYear()
+        let month = date.getMonth() + 1
+        let dat = date.getDate()
+        let hour = date.getHours()
+        let min = date.getMinutes()
+        let sec = date.getSeconds()
+        month = month < 10 ? '0' + month : month
+        dat = dat < 10 ? '0' + dat : dat
+        hour = hour < 10 ? '0' + hour : hour
+        min = min < 10 ? '0' + min : min
+        sec = sec < 10 ? '0' + sec : sec
+        return `现在是 ${year}年${month}月${dat}日 ${hour}时${min}分${sec}秒`
+      }
+      const div = document.querySelector('div')
+      div.innerHTML = getMyDate() // 先写上 不然第一秒不显示
+      setInterval(function () {
+        div.innerHTML = getMyDate()
+      }, 1000)
+    </script>
+  </body>
+</html>

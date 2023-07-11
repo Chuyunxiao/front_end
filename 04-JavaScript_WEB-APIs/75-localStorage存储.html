@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.要存储一个名字 'uname' , 'pink老师'
+        // localStorage.setItem(键,值)
+        localStorage.setItem('uname', 'pink老师')
+        // 2.获取方式 都加引号
+        console.log(localStorage.getItem('uname'))
+        // 3.删除本地存储 只删除名字
+        localStorage.removeItem('uname')
+        // 4.改
+        localStorage.setItem('uname', 'red老师')
+
+        // 我要存一个年龄
+        localStorage.setItem('age',18)
+        // 本地存储只能存储字符串，这里输出的18还是个字符串
+        console.log(localStorage.getItem('age'))
+
+        // sessionStorage 关闭了页面数据就会消失
+    </script>
+</body>
+</html>

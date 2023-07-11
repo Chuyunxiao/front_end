@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="http://www.taobao.com">支付成功,5秒内自动跳回首页</a>
+    <script>
+        const a = document.querySelector('a')
+        let sec = 5
+        let n = setInterval(function(){
+            sec--
+            a.innerHTML = `支付成功,${sec}秒内自动跳回首页`
+            if(sec === 0){
+                clearInterval(n)
+                location.href = "http://www.taobao.com"
+            }
+        }, 1000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   ES6模块功能主要有两个命令构成：【export】 和 【import】
+      //   export命令用于规定模块的对外接口，import命令用于输入其他模块提供的功能。
+      //   一个模块就是一个独立的文件。该文件内部的所有变量，外部无法获取。如果你希望外部能够读取模块内部的某个变量，
+      // 就必须使用export关键字输出该变量
+
+      //   ep1:
+      // 【export】部分
+      //module/index.js
+      export const name = "张三";
+      export const age = 18;
+      export const sayName = function () {
+        console.log(fristName);
+      };
+
+      //也可以这样
+      const name = "张三";
+      const age = 18;
+      const sayName = function () {
+        console.log(fristName);
+      };
+      export { name, age, sayName };
+
+      // 【import】部分
+      //main.js
+      import { name, age, sayName } from "./modules/index.js"; //解构赋值 {name, age, sayName}
+
+
+
+
+
+      //   ep2: 使用export default命令为模块指定默认输出，在其它模块加载该模块时，import命令可以为该匿名函数指定任意名字
+      //【export部分】
+      //   export default function(){
+      //    console.log('foo');
+      //   }
+
+      // 或者写成
+      // function foo() {
+      //   console.log('foo');
+      // }
+      // export default foo;
+
+      //【import部分】
+      // import customName from './export-default.js'
+      // customNmae();//foo
+
+
+
+
+
+      //   ep3: 如果想在一条import语句中，同时输入默认方法（default）和其他接口（非default），可以写成下面这样
+      // 【export部分】
+      //   export default function () {
+      //     console.log("foo");
+      //   }
+      //   export function add() {
+      //     console.log("add");
+      //   }
+
+      // 【import部分】
+      //  import customName, { add } from "export-default.js";
+
+      //   // 方式二 * 代表所有属性和方法 as 代表重命名
+      //   import * as f from "export-default.js";
+      //   console.log(f); // 输出一个 模块, 里面保存了 export 传过来的所有属性和方法
+      //   console.log(f.default);
+    </script>
+  </body>
+</html>

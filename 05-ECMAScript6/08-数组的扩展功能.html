@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <script>
+        // 数组的方法 from() of()
+        // 1. from() 将伪数组 转化为真正的数组
+        function add() {
+            // console.log(arguments)
+            // es5转换
+            // let arr = [].slice.call(arguments)
+            // console.log(arr)
+
+            // es6写法
+            let arr = Array.from(arguments)
+            console.log(arr)
+        }
+        add(1,2,3)
+
+        let lis = document.querySelectorAll('li')
+        // console.log(lis)
+        // console.log(Array.from(lis))
+        // 扩展运算符 将伪数组转换为真正的数组  
+        console.log([...lis])
+
+        // from() 还可以接受第二个参数 用来对每个元素进行处理
+
+        let liContents = Array.from(lis, li => li.innerHTML)
+        console.log(liContents)
+
+        // 2. of() 将一组任意数据类型的值，转换成数组 
+        console.log(Array.of(3,11,20,'30',[1,2,3],{id:1}))
+
+        // 3. copyWithin() 数组内部将指定位置之后的所有元素，复制到其他位置，并覆盖这些元素
+        let p = [1,2,3,8,9,10].copyWithin(1,2)
+        console.log(p) // [1,3,8,9,10,10]
+
+        // 4. find() findIndex()
+        // 找出第一个符合条件的数组成员，后接回调函数
+        let num = [1,2,-10,-20,9,2].find(n => n < 0)
+        console.log(num)
+        // 找出第一个符合条件的数组成员的【索引】，后接回调函数
+        let index = [1,2,-10,-20,9,2].findIndex(n => n < 0)
+        console.log(index)
+
+        // 5. entries() keys() values() 返回一个遍历器 可以使用for...of循环进行遍历
+
+        // keys()对键名遍历
+        // values()对键值遍历
+        // entries()对键值对遍历
+        let arr = ['a','b','c']
+        for(let index of arr.keys()){
+            console.log(index)
+        }
+        for(let value of arr.values()){
+            console.log(value)
+        }
+        for(let [key,value] of arr.entries()){
+            console.log(key, value)
+        }
+
+        let it = arr.entries() // 取得遍历器
+        console.log(it.next().value)
+        console.log(it.next().value)
+        console.log(it.next().value)
+        console.log(it.next().value) // 超出边界 undefined
+
+        // 6. includes() 返回一个布尔值，表示某个数组是否包含某个值
+        console.log([1,2,3].includes(4))
+        console.log([1,2,3].includes(2))
+    </script>
+</body>
+</html>

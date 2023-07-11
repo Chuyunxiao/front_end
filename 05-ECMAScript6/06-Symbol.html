@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 原始数据类型 Symbol ，它表示是独一无二的值
+        // 最大的用途：用来定义对象的私有变量
+        const name = Symbol('name')
+        const name2 = Symbol('name')
+        console.log(name === name2)
+
+        let s1 = Symbol('s1')
+        console.log(s1)
+        let obj = {
+            [s1]:'小马哥'
+        }
+        // 如果用Symbol定义的对象中的变量，取值时一定要用中括号[]获取
+        console.log(obj[s1])
+
+        // for(let key in obj) {
+        //     consolg.log(key)
+        // }
+        // console.log(Object.keys(obj))
+
+        // 获取Symbol声明的属性
+        let s = Object.getOwnPropertySymbols(obj)
+        console.log(s[0])
+        
+        let m = Reflect.ownKeys(obj)
+        console.log(m[0])
+    </script>
+</body>
+</html>

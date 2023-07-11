@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .father {
+        width: 500px;
+        height: 500px;
+        background-color: pink;
+      }
+      .son {
+        width: 200px;
+        height: 200px;
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="father">
+      <div class="son"></div>
+    </div>
+    <script>
+      // 山东  济南  蓝翔   目标（pink老师）  捕获阶段
+      //  蓝翔  济南   山东   冒泡阶段
+
+      //   冒泡
+      const father = document.querySelector('.father')
+      const son = document.querySelector('.son')
+      document.addEventListener('click',function(){
+        alert('我是爷爷')
+      },false) // 参数默认是false->冒泡, true->捕获 
+      father.addEventListener('click',function(){
+        alert('我是爸爸')
+      },false)
+      son.addEventListener('click',function(e){
+        alert('我是儿子')
+        // 阻止流动传播
+        e.stopPropagation()
+      },false)
+    </script>
+  </body>
+</html>

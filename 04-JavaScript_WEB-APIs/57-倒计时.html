@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .countdown {
+      width: 240px;
+      height: 305px;
+      text-align: center;
+      line-height: 1;
+      color: #fff;
+      background-color: brown;
+      /* background-size: 240px; */
+      /* float: left; */
+      overflow: hidden;
+    }
+
+    .countdown .next {
+      font-size: 16px;
+      margin: 25px 0 14px;
+    }
+
+    .countdown .title {
+      font-size: 33px;
+    }
+
+    .countdown .tips {
+      margin-top: 80px;
+      font-size: 23px;
+    }
+
+    .countdown small {
+      font-size: 17px;
+    }
+
+    .countdown .clock {
+      width: 142px;
+      margin: 18px auto 0;
+      overflow: hidden;
+    }
+
+    .countdown .clock span,
+    .countdown .clock i {
+      display: block;
+      text-align: center;
+      line-height: 34px;
+      font-size: 23px;
+      float: left;
+    }
+
+    .countdown .clock span {
+      width: 34px;
+      height: 34px;
+      border-radius: 2px;
+      background-color: #303430;
+    }
+
+    .countdown .clock i {
+      width: 20px;
+      font-style: normal;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="countdown">
+    <p class="next">今天是2099年9月9日</p>
+    <p class="title">下课倒计时</p>
+    <p class="clock">
+      <span id="hour">00</span>
+      <i>:</i>
+      <span id="minutes">25</span>
+      <i>:</i>
+      <span id="scond">20</span>
+    </p>
+    <p class="tips">22:00:00下课</p>
+  </div>
+  <script>
+    const date = new Date()
+    const todayYear = date.getFullYear()
+    const todayMonth = date.getMonth() + 1
+    const todayDay = date.getDate()
+    const next = document.querySelector('.next')
+    const h = document.querySelector('#hour')
+    const m = document.querySelector('#minutes')
+    const s = document.querySelector('#scond')
+    next.innerHTML = `今天是${todayYear}年${todayMonth}月${todayDay}日`
+    //
+    function getLastTime(){s
+        const date = +new Date() / 1000
+        const target = +new Date('2023-3-1 22:00:00') / 1000
+        const lastSec = target - date
+        let hour = parseInt(lastSec / 3600 % 24)
+        let min = parseInt(lastSec / 60 % 60)
+        let sec = parseInt(lastSec % 60)
+        hour = hour < 10 ? '0' + hour : hour
+        min = min < 10 ? '0' + min : min
+        sec = sec < 10 ? '0' + sec : sec
+        h.innerHTML = hour
+        m.innerHTML = min
+        s.innerHTML = sec
+    }
+    getLastTime()
+    console.log()
+    setInterval(function(){
+        getLastTime()
+    }, 1000)
+  </script>
+</body>
+
+</html>

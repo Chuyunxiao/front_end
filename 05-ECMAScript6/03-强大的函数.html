@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.带参数默认值的函数
+        // ES5 写法
+        function add(a,b) {
+            a = a || 10
+            b = b || 20
+            return a + b
+        }
+        console.log(add())
+
+        // ES6写法
+        function add_(a, b = 25) {
+            return a + b
+        }
+        console.log(add_(15)) // 40
+
+        // 2.默认的表达式也可以是一个函数
+        function _add(a, b = getVal(5)) {
+            return a + b
+        }
+
+        function getVal(val) {
+            return val + 5
+        }
+        console.log(_add(40)) // 50
+
+
+        // ES5写法
+        // function pick(obj) {
+        //     let res = Object.create(null)
+        //     for(let i = 1; i < arguments.length; i++){
+        //         res[arguments[i]] = obj[arguments[i]]
+        //     }
+        //     return res
+        // }
+
+        // 3. ES6语法 剩余参数: 由3个点... 和一个紧跟着的具名参数指定 ...simple
+        function pick(obj, ...keys) {
+            let res = Object.create(null)
+            for(let i = 0; i < keys.length; i++){
+                res[keys[i]] = obj[keys[i]]
+            }
+            return res
+        }
+        const book = {
+            title:'es6教程',
+            author:'小马哥',
+            year:2019
+        }   
+        let bookData = pick(book, 'author', 'year')
+        console.log(bookData)
+
+        // 4.扩展运算符...
+        // 剩余运算法：把多个独立的参数，合并到一个数组中
+        // 扩展运算符：将一个数组分割，并将各个项作为分离的参数传给函数
+        // const maxNum = Math.max(20,30)
+        // console.log(maxNum)
+
+        // 处理数组中的最大值，使用apply
+        const arr = [10,20,30,40,50,60,100,70,90]
+        // ES5 apply(null,arr)
+        // console.log(Math.max.apply(null,arr))
+
+        // ES6 扩展运算符更方便
+        console.log(Math.max(...arr))
+
+        // ES6 **************箭头函数**************
+        // 使用=> 来定义函数 function(){} 等于 ()=>{}
+        // let _add_ = (a, b)=>{
+        //     return a + b
+        // }
+        const _add_ = (a,b) => a+b
+        console.log(_add_(5,4))
+        const fn = () => 'helloWorld' + 123
+        console.log(fn())
+
+       const getObj = id => ({
+        id:id,
+        name:'小马哥'
+       }) 
+       const obj = getObj(1)
+       console.log(obj)
+
+        //    let _fn = (function() {
+        //     return function() {
+        //         console.log('hello es6')
+        //     }
+        //    })();
+        //    _fn()
+        let _fn = (() => {
+            return () => console.log('hello es6')
+        })();
+        _fn()
+
+        // 没有this绑定
+        // es5中的this指向：取决于调用该函数的上下文对象
+        // const pageHandle = {
+        //     id: 123,
+        //     init: function(){
+        //         document.addEventListener('click',function(e){
+        //             this.doSomeThings(e.type) // this经点击变成了document,不再是object
+        //         }.bind(this))
+        //     },
+        //     doSomeThings: function(type) {
+        //         console.log(`事件类型:${type},当前id:${this.id}`)
+        //     }
+        // }
+        // pageHandle.init() 
+
+        // es6的箭头函数 没有this指向
+        const pageHandle = {
+            id: 123,
+            init: function(){
+                document.addEventListener('click',(e)=>{ // 这里用箭头函数，内部的this指向根据作用域链往上找
+                    this.doSomeThings(e.type) // this经点击变成了document,不再是object
+                })
+            },
+            doSomeThings: function(type) {
+                console.log(`事件类型:${type},当前id:${this.id}`)
+            }
+        }
+        pageHandle.init()
+
+        // 使用箭头函数的注意事项：
+        // 1.函数内部没有arguments
+        // 2.函数内部不能使用new关键字实例化对象 function函数是一个对象，箭头函数不是对象，是一个语法糖
+    </script>
+</body>
+</html>

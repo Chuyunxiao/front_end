@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Interator
+        // 是一种新的遍历机制，两个核心
+        // 迭代器是一个接口，能够快速的访问数据，通过Symbol.iterator来创建迭代器，通过next()方法获取迭代后的结果
+        // 迭代器是一个遍历数据结构的指针(数据库的游标)
+
+        // 使用迭代
+        const items = ['one','two','three']
+        // 1.创建新的迭代器
+        const it = items[Symbol.iterator]()
+        console.log(it.next()) // {value:"one", done:false} done表示是否遍历完成
+        console.log(it.next())
+        console.log(it.next())
+        console.log(it.next())
+    </script>
+</body>
+</html>

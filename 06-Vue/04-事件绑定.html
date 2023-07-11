@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+    <!-- v-on:event = @event -->
+    <!-- <input type="button" value="点我一下" v-on:click="handle" id="app"> -->
+    <input type="button" value="点我一下" @click="handle" id="app">
+    <script>
+        new Vue({
+            el: "#app",
+            methods: {
+                handle: () => {
+                    alert("?")
+                },
+            }
+        })
+    </script>
+</body>
+</html>

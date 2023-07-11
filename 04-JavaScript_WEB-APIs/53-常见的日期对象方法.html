@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 获得日期对象
+        const date = new Date()
+        // 使用里面的方法
+        console.log(date.getFullYear())
+        console.log(date.getMonth() + 1) // 月份取值是【0~11】 我们要手动+1
+        console.log(date.getDate())
+        console.log(date.getDay()) // 星期几 【取值0~6 星期天不是7 而是0】
+
+        const year = date.getFullYear()
+        let month = date.getMonth() + 1
+        let dat = date.getDate()
+        let hour = date.getHours()
+        let min = date.getMinutes()
+        if(date.getMonth() < 10) month = '0' + month
+        if(date.getDate() < 10) dat = '0' + dat
+        if(date.getHours() < 10) hour = '0' + hour
+        if(date.getMinutes() < 10) min = '0' + min
+        document.write(`${year}-${month}-${dat} ${hour}:${min}`)
+    </script>
+</body>
+</html>

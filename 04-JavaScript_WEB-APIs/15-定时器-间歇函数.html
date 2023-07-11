@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // setInterval(函数，间隔时间（单位：毫秒）)
+        // let i = 1;
+        // setInterval(function(){
+        //     console.log(`${i}秒过去了`)
+        //     i++
+        // }, 1000)
+
+        function fn() {
+            console.log('一秒执行一次')
+        }
+        // // 函数setInterval返回的是id值 是计时器的个数序号
+        let n = setInterval(fn, 1000)
+        console.log(n) // n是计时器的序号
+        // 关闭n号计时器
+        clearInterval(n) // 
+
+        // 用let的原因是 如果再次开启同名计时器 会因为类型为const而报错
+        // const num = 10
+        // num = 10 报错
+    </script>
+</body>
+</html>

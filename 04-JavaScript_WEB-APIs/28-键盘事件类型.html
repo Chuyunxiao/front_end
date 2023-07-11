@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="">
+    <script>
+        // // 1.键盘事件 keydown keyup
+        const ipt = document.querySelector('[type="text"]')
+        // ipt.addEventListener('keydown', function(){
+        //     console.log('键盘按下了')
+        // })
+        // ipt.addEventListener('keyup', function(){
+        //     console.log('键盘弹起了')
+        // })
+        
+        // 2.用户输入文本事件 input
+        ipt.addEventListener('input', function(){
+            console.log(ipt.value)
+        })
+    </script>
+</body>
+</html>

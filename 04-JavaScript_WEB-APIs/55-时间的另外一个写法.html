@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 300px;
+        height: 40px;
+        border: 1px solid pink;
+        text-align: center;
+        line-height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      const div = document.querySelector('div')
+      //   div.innerHTML = date.toLocaleString()  2023/3/1 10:24:52
+      //   div.innerHTML = date.toLocaleDateString() 2023/3/1
+      //   div.innerHTML = date.toLocaleTimeString() 10:26:13
+      const date = new Date()
+      div.innerHTML = date.toLocaleString()
+      setInterval(function () {
+        const date = new Date()
+        div.innerHTML = date.toLocaleString()
+      }, 1000)
+    </script>
+  </body>
+</html>

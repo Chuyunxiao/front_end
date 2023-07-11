@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <p id="1">小马哥</p>
+            </li>
+        </ul>
+    </div>
+    <script>
+        const box = document.querySelector('.box')
+        let id = 1
+        let name = '小马哥'
+        let htmlStr = `
+        <ul>
+            <li>
+                <p id="${id}">${name}</p>
+            </li>
+        </ul>
+        `
+        box.innerHTML = htmlStr
+    </script>
+</body>
+</html>

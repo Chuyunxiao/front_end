@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>练习 - 网页时钟</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .clock {
+      width: 600px;
+      height: 600px;
+      background: url(./img/clock.jpg) no-repeat;
+      margin: 50px auto 0;
+      position: relative;
+    }
+
+    .hh,
+    .mm,
+    .ss {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: url(./img/hour.png) no-repeat center;
+    }
+
+    .mm {
+      background-image: url(./img/minute.png);
+      transform: rotate(0deg);
+    }
+
+    .ss {
+      background-image: url(./img/second.png);
+      transform: rotate(0deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="clock">
+    <div class="hh" id="h"></div>
+    <div class="mm" id="m"></div>
+    <div class="ss" id="s"></div>
+  </div>
+  
+  <script>
+    const hour = document.querySelector('#h')
+    const minute = document.querySelector('#m')
+    const sec = document.querySelector('#s')
+    let i = 0
+    let hr = 0
+    let mr = 0
+    let sr = 0
+    let iv = setInterval(function (){
+      i++
+      sr += 6
+      sec.style.transform = `rotate(${sr}deg)`
+      if(i % 60 === 0){
+        mr += 6
+        minute.style.transform = `rotate(${mr}deg)`
+      }
+      if(i % 720 === 0){
+        hr += 6
+        hour.style.transform = `rotate(${hr}deg)`
+      } 
+    }, 10)
+  </script>
+</body>
+
+</html>

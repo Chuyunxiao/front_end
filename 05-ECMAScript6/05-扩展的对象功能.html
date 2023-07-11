@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // es6直接写入变量和函数，作为对象的属性和方法
+        const name = '小马哥', age = 20
+        const person = {
+            name,
+            age,
+            sayName() {
+                console.log(this.name)
+            }
+        }
+        person.sayName()
+
+        function fn(x, y) {
+            return {x, y}
+        }
+        console.log(fn(10,20))
+
+        let car = {
+            wheel: 4,
+            set(newVal) {
+                if(newVal < this.wheel) {
+                    throw new Error('轮子数太少了')
+                }
+                this.wheel = newVal
+            },
+            get() {
+                return this.wheel 
+            }
+        }
+        car.set(6)
+        console.log(car.get())
+
+        const obj = {}
+        obj.isShow = true
+        
+        const name2 = 'a'
+        obj[name2 + 'bc'] = 123
+        obj['f' + 'bc'] = function() {
+            console.log(666)
+        }
+        obj.fbc()
+        console.log(obj)
+
+        // const obj = {
+        //     isShow: true,
+        //     [name2 + 'bc']: 123,
+        //     ['f' + name2]() {
+        //         console.log(this)
+        //     }
+        // }
+
+        // 对象的方法
+        // is()等价于 === 比较两个值是否严格相等
+        console.log(NaN === NaN) // false
+        console.log(Object.is(NaN,NaN)) // true
+        // **********assign() 对象的合并**********
+        // Object.assign(target,obj1,obj2,obj3,...) 返回合并后的【新对象】
+        const ooo = {p:6}
+        const OBJ = Object.assign(ooo,{a:1},{b:2},{c:3})
+        console.log(OBJ)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // generator函数 可以通过yield关键字，将函数挂起，给改变执行流提供了可能，同时为异步编程提供了方案
+        // 它与普通函数的区别：
+        // 1.function后面，函数名之前 有个*
+        // 2.只能在函数内部使用yield表达式，让函数挂起
+        function* fn() {
+            console.log('one')
+            yield 2
+            console.log('two')
+            yield 3
+            console.log('three')
+        }
+        // 返回一个遍历器对象 可以调用next()
+        let o = fn()
+        // console.log(o)
+        console.log(o.next())
+        console.log(o.next())
+        console.log(o.next())
+        console.log('-----------------------')
+        // 总结：generator函数是分段执行的，yield语句是暂停执行，而next()函数是恢复执行
+
+        function* add() {
+            console.log('start')
+            // x 不是yield '2'的返回值，它是next()调用 恢复当前yield()执行传入的实参
+            let x = yield '2'
+            console.log('one:' + x)
+            let y = yield '3'
+            console.log('two:' + y)
+            return x + y
+        }
+
+        const adds = add()
+        console.log(adds.next())
+        console.log(adds.next(20))
+        console.log(adds.next(30))
+        
+        // 使用场景：为不具备Iterator接口的对象提供了遍历操作
+        function* objectEntries(obj) {
+            // 获取对象的所有key保存到数组[name,age]
+            const propKeys = Object.keys(obj)
+            for(const propkey of propKeys){
+                yield [propkey,obj[propkey]]
+            }
+        }
+        const obj = {
+            name: '小马哥',
+            age: 18
+        }
+        obj[Symbol.iterator] = objectEntries
+        console.log(obj)
+        for(let [key, value] of objectEntries(obj)){
+            console.log(`${key}:${value}`)
+        }
+    </script>
+</body>
+</html>

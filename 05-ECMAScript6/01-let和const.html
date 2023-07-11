@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var
+        // console.log(a)
+        // var a = 2
+        // 1.let声明变量 没有变量提升
+        // console.log(a) 报错
+        // let a = 10
+
+        // 2.是一个块作用域
+        // console.log(b) 报错
+        // if(1 === 1){
+            // let b = 10
+        // }
+
+        // var变量声明可覆盖
+        // var a = 2
+        // var a = 4
+        // console.log(a)
+        
+        // 3.不能重复声明
+        // let a = 2
+        // let a = 4
+        // console.log(a) 报错
+        
+        // 4.const 声明常量 一旦被声明无法修改 没有变量提升 属于块作用域
+        const max = 30
+        // max = 40 报错
+        console.log(max)
+
+        const obj = {
+            name:'小马哥'
+        }
+        // obj = {
+        //     age:20
+        // } 报错
+        obj.name = 'alex'
+        console.log(obj)
+
+        // 作用1：for循环是个经典的例子
+        const arr = []
+        for(var i = 0; i < 10; i++){
+            arr[i] = function() {
+                return i
+            }
+        }
+        console.log(arr[5]()) // 10 因为var是全局作用域 结束循环后i变成10
+
+        const arr_ = []
+        for(let j = 0; j < 10; j++){
+            arr_[j] = function() {
+                return j
+            }
+        }
+        console.log(arr_[5]()) // 5
+
+        // 作用2：不会污染全局变量
+        let RegExp = 10
+        console.log(RegExp)
+        console.log(window.RegExp)
+
+        // 默认情况下用const , 只有知道变量值要被修改时 , 才用let
+    </script>
+</body>
+</html>

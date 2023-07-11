@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="username" id="">
+        <input type="password" name="pwd" id="">
+        <button>提交</button>
+        <button class="reload">刷新</button>
+
+        <a href="#/my">我的</a>
+        <a href="#/friend">关注</a>
+        <a href="#/download">下载</a>
+    </form>
+    <script>
+        // console.log(window.location)
+        // console.log(location)
+        // 1.href 经常用href 利用js的方法去跳转页面
+        // console.log(location.href)
+        // location.href = "http://www.baidu.com"
+        // console.log(location.search) // 获取网址 ?后面的信息
+        // console.log(location.hash) // 获取网址 #后面的信息
+        // location.reload() 刷新页面
+        const reload = document.querySelector('.reload')    
+        reload.addEventListener('click',function(){
+            location.reload()
+            // 可以给参数，如果是reload(true)就是强制刷新
+        })
+    </script>
+</body>
+</html>
